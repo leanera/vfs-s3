@@ -230,7 +230,7 @@ public class SS3FileObject extends AbstractFileObject
     /**
      * Lists the children of this file.  Is only called if {@link #doGetType}
      * returns {@link FileType#FOLDER}.  The return value of this method
-     * is cached, so the implementation can be expensive.<br />
+     * is cached, so the implementation can be expensive.
      * @return a possible empty String array if the file is a directory or null or an exception if the
      * file is not a directory or can't be read.
      * @throws Exception if an error occurs.

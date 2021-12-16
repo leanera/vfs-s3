@@ -32,7 +32,7 @@ public class SS3Constants
      * scheme aware and using the regular HTTP scheme would clash with the default
      * HTTP provider in many cases.
      * 
-     * S3SCHEME://<authority>/<containter>/<path>
+     * 
      * 
      * E.g. s3://s3.amazonaws.com/myTestContainer01/testFolder01/testSubFolder01/testFile01.txt
      * 
