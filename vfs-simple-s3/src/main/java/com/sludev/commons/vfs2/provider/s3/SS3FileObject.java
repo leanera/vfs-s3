@@ -147,23 +147,7 @@ public class SS3FileObject extends AbstractFileObject
     
     private boolean objectExists( String cont, String path )
     {
-        boolean res = false;
-        
-        try 
-        {
-            S3Object object = fileSystem.getClient().getObject(cont, path);
-            res = true;
-        } 
-        catch (AmazonServiceException ex) 
-        {
-            String errorCode = ex.getErrorCode();
-            if (!errorCode.equals("NoSuchKey")) 
-            {
-                throw ex;
-            }
-        }
-        
-        return res;
+        	return fileSystem.getClient().doesObjectExist(cont, path);
     }
     
     /**
