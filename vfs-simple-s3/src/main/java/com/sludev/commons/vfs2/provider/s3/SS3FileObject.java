@@ -371,7 +371,11 @@ public class SS3FileObject extends AbstractFileObject
     @Override
     protected void doDetach() throws Exception
     {
-        currBlob = null;
+    	if (currBlob != null) {
+    		currBlob.getObjectContent().abort();
+    		currBlob.close();
+    		currBlob = null;
+    	}
         currBlobProperties = null;
     }
 
